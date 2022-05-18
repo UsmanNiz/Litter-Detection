@@ -17,11 +17,11 @@ trainListOfTxt = listOfText[:int(lengthOfTxt*0.8)]
 valListOfTxt = listOfText[int(lengthOfTxt*0.8):]
 
 for val in trainListOfTxt:
-    shutil.copy("Data/" + (val),"Litter Detection Dataset/labels/train")
-    shutil.copy(("Data/" + (val.split(".")[0] +".jpg")), "Litter Detection Dataset/images/train" )
+    shutil.copy("Data/" + (val),"Dataset/labels/train")
+    shutil.copy(("Data/" + (val.split(".")[0] +".jpg")), "Dataset/images/train" )
 for val in valListOfTxt:
-    shutil.copy("Data/" + (val),"Litter Detection Dataset/labels/val")
-    shutil.copy(("Data/" + (val.split(".")[0] +".jpg")), "Litter Detection Dataset/images/val" )
+    shutil.copy("Data/" + (val),"Dataset/labels/val")
+    shutil.copy(("Data/" + (val.split(".")[0] +".jpg")), "Dataset/images/val" )
 
 # os.mkdir("")
 

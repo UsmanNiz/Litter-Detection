@@ -2,6 +2,7 @@ import cv2
 import os
 
 # cap = cv2.VideoCapture("LITTER/VID20220320142848.mp4")
+print("Sdfsdfsd")
 pathToListDirectory = ("LITTER/")
 directoryToSaveFrame = ("Data")
 
@@ -9,6 +10,7 @@ directoryToSaveFrame = ("Data")
 class Directory:
     def __init__(self):
         self.currentDirectory = os.getcwd()
+        print("THE CURRENT DIRECTORY ",self.currentDirectory)
         # self.directoryName = directoryName
     # def
 
@@ -56,8 +58,8 @@ class boomboom:
         while True:
             self.counter = self.counter + 1
             success, frame = cap.read()
-            if self.counter % 5 == 0 and success:
-                frameName = (videoName.split(".")[0]) + str("#") + str(self.counter / 5).split(".")[0] + str(".jpg")
+            if self.counter % 4 == 0 and success:
+                frameName = (videoName.split(".")[0]) + str("#") + str(self.counter / 4).split(".")[0] + str(".jpg")
                 cv2.imwrite(directoryToSaveFrame + "/" + frameName, frame)
             if not success:
                 self.counter = 0
